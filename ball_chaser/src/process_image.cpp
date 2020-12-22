@@ -85,7 +85,7 @@ void process_image_callback(const sensor_msgs::Image img)
         static const float BYTES_PER_PIXEL = 3.0;
         int white_pixel = 255;
         float linear_x = 0.0;
-        float angular_z = 0.25;
+        float angular_z = 0.0;
 
         // TODO: Loop through each pixel in the image and check if there's a bright white one
         // Then, identify if this pixel falls in the left, mid, or right side of the image
@@ -99,7 +99,7 @@ void process_image_callback(const sensor_msgs::Image img)
                 {
                     float position = 2.0 * ((float)(i % img.step) / BYTES_PER_PIXEL / (float)img.width - 0.5); // center around zero
                     ROS_INFO_STREAM("Ball seen: " + std::to_string(position*100));
-                    linear_x = 0.5;
+                    linear_x = 0.1;
                     angular_z = position * -0.5; // flip sign to get correct rotational direction
                     break;
                 }
