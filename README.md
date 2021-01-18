@@ -7,6 +7,12 @@ A ROS localization project
 - ROS Kinetic
 - Ubuntu 16.04
 
+### Add non-standard ROS packages
+- `$ sudo apt-get install ros-kinetic-navigation`
+- `$ sudo apt-get install ros-kinetic-map-server`
+- `$ sudo apt-get install ros-kinetic-move-base`
+- `$ sudo apt-get install ros-kinetic-amcl`
+
 ### Set up
 Create a catkin workspace
 - `$ mkdir -p ~/catkin_ws/src && cd ~/catkin_ws/src`
