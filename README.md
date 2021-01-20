@@ -42,6 +42,7 @@ Quickly the robot localization converges to a good position
 ![localized](./screenshots/localized.png)
 
 ## Project Structure
+```
 .Project3                          # Where Am I Project
     ├── my_robot                       # my_robot package
     │   ├── launch                     # launch folder for launch files
@@ -80,3 +81,4 @@ Quickly the robot localization converges to a good position
     │   ├── CMakeLists.txt             # compiler instructions
     │   ├── package.xml                # package info
     └──
+```
