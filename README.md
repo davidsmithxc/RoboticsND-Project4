@@ -30,3 +30,13 @@ Clone and build this repo into the source folder
 - open another terminal to launch rviz
 - `$ rosrun rviz rviz -d ~/catkin_ws/src/p3RvizConfig.rviz`
 - In RViz, use the 2D waypoint to have the robot drive to a location and localize.
+
+## Results
+The robot starts out initially unlocalized
+![unlocalized](./screenshots/notLocalized.png)
+
+With just a small amount of driving, the robot quickly begins to converge the localization
+![initalConvergence](./screenshots/initialLocalize.png)
+
+Quickly the robot localization converges to a good position
+![localized](./screenshots/localized.png)
