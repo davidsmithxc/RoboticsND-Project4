@@ -1,5 +1,5 @@
-# RoboticsND-Project3
-A ROS localization project
+# RoboticsND-Project4: Map My World
+A ROS mapping project
 
 ## Instructions
 ### Requirements
