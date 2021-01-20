@@ -40,3 +40,43 @@ With just a small amount of driving, the robot quickly begins to converge the lo
 
 Quickly the robot localization converges to a good position
 ![localized](./screenshots/localized.png)
+
+## Project Structure
+.Project3                          # Where Am I Project
+    ├── my_robot                       # my_robot package
+    │   ├── launch                     # launch folder for launch files
+    │   │   ├── robot_description.launch
+    │   │   ├── world.launch
+    │   │   ├── amcl.launch
+    |   ├── maps                       # maps for use in my world
+    |   |   ├── map.pgm
+    |   |   ├── map.yaml
+    │   ├── meshes                     # meshes folder for sensors
+    │   │   ├── hokuyo.dae
+    │   ├── urdf                       # urdf folder for xarco files
+    │   │   ├── rc_robot.gazebo
+    │   │   ├── rc_robot.xacro
+    │   ├── worlds                     # world folder for world files
+    │   │   ├── apartment_ball.world
+    │   │   ├── apartment.world
+    │   │   ├── empty.world
+    │   ├── CMakeLists.txt             # compiler instructions
+    │   ├── package.xml                # package info
+    ├── pgm_map_creator                # pgm_map_creator package
+    │   ├── launch                     # launch folder for launch files
+    │   │   ├── request_publisher.launch
+    │   ├── world                      # world files that should be converted
+    │   │   ├── my_world.world
+    │   ├── maps                       # pgm image files
+    │   │   ├── map.pgm
+    ├── ball_chaser                    # ball_chaser package
+    │   ├── launch                     # launch folder for launch files
+    │   │   ├── ball_chaser.launch
+    │   ├── src                        # source folder for C++ scripts
+    │   │   ├── drive_bot.cpp
+    │   │   ├── process_images.cpp
+    │   ├── srv                        # service folder for ROS services
+    │   │   ├── DriveToTarget.srv
+    │   ├── CMakeLists.txt             # compiler instructions
+    │   ├── package.xml                # package info
+    └──
