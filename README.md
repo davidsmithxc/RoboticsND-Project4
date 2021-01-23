@@ -1,5 +1,5 @@
 # RoboticsND-Project4: Map My World
-A ROS mapping project
+A ROS mapping project with rtabmap
 
 ## Instructions
 ### Requirements
@@ -12,6 +12,7 @@ A ROS mapping project
 - `$ sudo apt-get install ros-kinetic-map-server`
 - `$ sudo apt-get install ros-kinetic-move-base`
 - `$ sudo apt-get install ros-kinetic-amcl`
+- `$ sudo apt-get install ros-kinetic-rtabmap-ros`
 
 ### Set up
 Create a catkin workspace
@@ -19,27 +20,21 @@ Create a catkin workspace
 - `$ catkin_init_workspace`
 
 Clone and build this repo into the source folder
-- `$ git clone https://github.com/davidsmithxc/RoboticsND-Project3 ~/catkin_ws/src`
+- `$ git clone https://github.com/davidsmithxc/RoboticsND-Project4 ~/catkin_ws/src`
 - `$ cd ~/catkin_ws && catkin_make`
 
 ### Launching
+- open a terminal and launch the basic world
 - `$ source devel/setup.bash`
 - `$ roslaunch my_robot world.launch`
+- open another terminal to launch the teleop
+- `$ rosrun teleop_twist_keyboard teleop_twist_keyboard.py`
 - open another terminal to launch localization
-- `$ roslaunch my_robot acml.launch`
-- open another terminal to launch rviz
-- `$ rosrun rviz rviz -d ~/catkin_ws/src/p3RvizConfig.rviz`
-- In RViz, use the 2D waypoint to have the robot drive to a location and localize.
+- `$ roslaunch my_robot mapping.launch`
 
 ## Results
-The robot starts out initially unlocalized
-![unlocalized](./screenshots/notLocalized.png)
-
-With just a small amount of driving, the robot quickly begins to converge the localization
-![initalConvergence](./screenshots/initialLocalize.png)
-
-Quickly the robot localization converges to a good position
-![localized](./screenshots/localized.png)
+Manually driving the robot around the environment creates the following map
+![map](./screenshots/mapped_apt.png)
 
 ## Project Structure
 ```
@@ -49,6 +44,7 @@ Quickly the robot localization converges to a good position
     │   │   ├── robot_description.launch
     │   │   ├── world.launch
     │   │   ├── amcl.launch
+    │   │   ├── mapping.launch
     |   ├── maps                       # maps for use in my world
     |   |   ├── map.pgm
     |   |   ├── map.yaml
