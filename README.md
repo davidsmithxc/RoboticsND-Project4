@@ -23,6 +23,8 @@ Clone and build this repo into the source folder
 - `$ git clone https://github.com/davidsmithxc/RoboticsND-Project4 ~/catkin_ws/src`
 - `$ cd ~/catkin_ws && catkin_make`
 
+Download rtabmap database [here](https://drive.google.com/file/d/1W7wtt6ZWpD-ojFdZJD-BtYq4L9eG2Zux/view?usp=sharing)
+
 ### Launching
 - open a terminal and launch the basic world
 - `$ source devel/setup.bash`
@@ -38,7 +40,7 @@ Manually driving the robot around the environment creates the following map
 
 ## Project Structure
 ```
-.Project3                          # Where Am I Project
+.Project4                          # Where Am I Project
     ├── my_robot                       # my_robot package
     │   ├── launch                     # launch folder for launch files
     │   │   ├── robot_description.launch
