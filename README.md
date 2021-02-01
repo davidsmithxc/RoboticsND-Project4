@@ -13,6 +13,7 @@ A ROS mapping project with rtabmap
 - `$ sudo apt-get install ros-kinetic-move-base`
 - `$ sudo apt-get install ros-kinetic-amcl`
 - `$ sudo apt-get install ros-kinetic-rtabmap-ros`
+- `$ sudo apt-get install ros-kinetic-teleop-twist-keyboard`
 
 ### Set up
 Create a catkin workspace
